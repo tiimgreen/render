@@ -1,2 +1,0 @@
-module Render::ApplicationHelper
-end
