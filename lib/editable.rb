@@ -16,6 +16,7 @@ class Editable
     html_options.merge!(data_field: field,
                         data_field_type: 'text',
                         data_modal_attached: '0',
+                        data_modal_id: 1,
                         title: 'Click to edit')
 
     # Loops through html_options and add them to editable div
@@ -23,7 +24,10 @@ class Editable
       html_options.each do |key, val|
         # Adds an additional attributes specified in html_options to the
         # anchor tag.
-        output += "#{key.to_s.gsub!('_', '-')}=\"#{val}\" "
+
+        # Formats key from _ to -
+        formatted_key = key.to_s.include?('_') ? key.to_s.gsub!('_', '-') : key.to_s
+        output += "#{formatted_key}=\"#{val}\" "
       end
     end
 

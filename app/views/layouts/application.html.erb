@@ -7,8 +7,11 @@
 </head>
 <body class="<%= controller.controller_name %> <%= controller.action_name %>">
 
-<%= yield %>
+<div class="container">
+  <%= yield %>
+</div>
 
+<div class="modal_container"></div>
 <%= javascript_include_tag 'application' %>
 </body>
 </html>
