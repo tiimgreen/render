@@ -26,5 +26,15 @@ module Render
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    # Auto load all render assets
+    config.autoload_paths += %W(
+      #{config.root}/app/assets/render
+      #{config.root}/app/controllers/render
+      #{config.root}/app/helpers/render
+      #{config.root}/app/mailers/render
+      #{config.root}/app/models/render
+      #{config.root}/app/views/render
+    )
   end
 end
