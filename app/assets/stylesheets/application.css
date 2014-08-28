@@ -1,4 +1,5 @@
 /*
+ *= require bootstrap/index
  *= require_tree .
  *= require_self
  */
